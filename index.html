@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="passwordDisplay">
+            <input readonly placeholder="PASSWORD"  class="display" data-passwordDisplay>
+            <button class="copybtn" data-copy>
+                <span class="copy-pop" data-copymsg></span>
+                <img width="30" height="30" src="https://img.icons8.com/fluency-systems-regular/30/copy--v1.png" alt="copy--v1"/>
+            </button>
+
+        </div>
+
+
+        <div class="input-container">
+            <div class="length-container">
+                <p>Password Length</p>
+                <p data-lenghtNum >0</p>
+            </div>
+            <input type="range" min="1" max="20" class="slider" step="1" data-slider>
+        
+            <div class="check">
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Include Uppercase Letter</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Include Lowercase Letter</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="number">
+                <label for="number">Include Number</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Include Symbols</label>
+            </div>
+
+            <div class="strength-container">
+                <p>Strength</p>
+                <div class="indicator" strength-indicator></div>
+            </div>
+            <button class="generateButton">Generate Password</button>
+        </div>
+        <h3 class="vishal">  ⋆⋅☆⋅⋆ Made by Vishal Singh ⋆⋅☆⋅⋆ </h3>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

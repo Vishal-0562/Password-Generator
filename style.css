@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left, #D4145A, #FBB03B); 
+
+}
+.container{
+    width: 90%;
+    max-width: 450px;
+    border-radius: 5px;
+}
+
+h1{
+    color : rgba(255, 255, 255, 0.959);
+    font-size: 2rem;
+    text-transform:uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.passwordDisplay{
+    position: relative;
+    background-color: #ffffff3b;
+    border-bottom: .2rem solid rgba(255, 255, 255, 0.507);
+    border-radius: .5rem;
+    margin: 1rem 0;
+    padding-top: 0.1rem ;
+    
+}
+.display{
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    padding:1.15rem 1rem;
+    color: rgb(28, 29, 16);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 30px;
+    padding-right: 3.25rem;
+    border: none;
+}
+
+.display::placeholder{
+    position:absolute;
+    top: 50%;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 30px;
+    color: rgba(21, 21, 21, 0.795);
+    text-transform: uppercase;
+    transform:translateY(-50%);
+}
+
+.passwordDisplay button{
+    position:absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform:translateY(-50%);
+
+}
+
+.input-container{
+    width: 100%;
+    background-color: #ffffff3b;
+    border-radius: 1rem;
+    padding: 1rem;
+    border-bottom: .2rem solid rgba(255, 255, 255, 0.507);
+}
+
+.length-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.length-container p:nth-child(1){
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+
+
+}
+.length-container p:nth-child(2){
+    color: rgb(255, 238, 0);
+    font-size: 1.2rem;
+    
+}
+
+.strength-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.strength-container p{
+    color:aliceblue;
+    font-size: 1.5rem;
+}
+
+.indicator{
+    width:1.5rem;
+    height:1.5rem;
+    border-radius: 50%;
+}
+
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0rem .5rem;
+
+}
+
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid rgb(250, 250, 250);
+    cursor: pointer;
+    position: relative;
+}
+
+.check input:checked{
+    background-color: rgb(250, 242, 0);
+
+}
+.check input:checked::before{
+    content: '✔';
+    position: relative;
+    color:rgb(0, 0, 0);
+    font-weight: 600;
+    left: 20%;
+    top: -1.5px;
+}
+
+.check label{
+    color: rgba(255, 255, 255, 0.717);
+    font-size:1.2rem;
+    letter-spacing: .75px;
+}
+
+.generateButton{
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform:uppercase;
+    font-size:1.2rem;
+    font-weight: 600;
+    color: yellow;
+    padding: 0.5rem 0;
+    background-color: black;
+    border-radius: 10px;
+    border-bottom: 2.5px solid yellow;
+    cursor: pointer;
+}
+
+.slider{
+ appearance: none;
+ width: 100%;
+ height: .75rem;
+ background: rgba(0, 0, 0, 0.817);
+ border-radius: 1rem ;
+ margin:0.5rem 0;
+ background-image:linear-gradient(to right, #ffcc33,#fd5d07) ;
+ /* background-image: linear-gradient(rgb(255, 234, 0),rgba(255, 221, 0, 0.767)); */
+ background-repeat: no-repeat;
+}
+
+.slider::-webkit-slider-thumb {
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%; 
+    background: rgb(255, 238, 0);
+    cursor: pointer;
+    margin: -4px 0;
+    box-shadow: 0px 0px 20px 0px rgba(242, 226, 0, 0.947);
+    transition: all 100ms ease-in;
+  }
+
+.slider::-webkit-slider-thumb:hover{
+    background-color: white;
+    outline: 2px solid rgb(126, 126, 126);
+    box-shadow: 0px 0px 20px 0px rgba(242, 226, 0, 0.947);
+}
+.slider:focus{
+    outline: 2px solid rgb(118, 118, 118);
+}
+
+
+.copybtn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.copy-pop{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    color:rgba(229, 255, 0, 0.947) ;
+    top: -35px;
+    left:-25px;
+    font-size:1rem;
+    padding: 3px 12px;
+    border: 1px solid yellow;
+    border-radius:1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin:bottom;
+    transition:all 250ms ease-in-out;
+}
+
+.copy-pop.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.vishal{
+    color:rgba(255, 255, 255, 0.703);
+    font-family: "Tangerine", cursive;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    cursor: not-allowed;
+}
+
+
+
