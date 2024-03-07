@@ -2,7 +2,7 @@
 
 It generates a strong, random password that meets your specifications. You can choose to include uppercase letters, lowercase letters, numbers, and symbols. It also know the strength of the password.
 
-## Strength Of Password
+## Strength of Password
 
 #### Red Colour ---> Weak Passoword
 #### Orange Colour ---> Moderate Password
@@ -19,5 +19,4 @@ It generates a strong, random password that meets your specifications. You can c
 #### Include Symbols (!@#$%^&*): Provides the strongest defense.
 
 ## Project Link
-This is the link of 
-[Password Generator](https://vishal-0562.github.io/Password-Generator/).
+#### This is the link of  [Password Generator](https://vishal-0562.github.io/Password-Generator/).
